@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">3D Platform</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiYW1yMDAwMDIiLCJhIjoiY2s5N3RlbWs5MDRyODNtcW53d2N3OWE0bCJ9.9SsBohLYxL-OhAZVFEC3Jg</string>
+    <string name="zoom_map_in_and_out_variable_label_instruction">oom in and out to see red labels try to avoid collisions</string>
+</resources>

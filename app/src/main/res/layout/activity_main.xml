@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraBearing="-40"
+        mapbox:mapbox_cameraTargetLat="52.5454363"
+        mapbox:mapbox_cameraTargetLng="13.3514886"
+        mapbox:mapbox_cameraTilt="40"
+        mapbox:mapbox_cameraZoom="15.99">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="0dp"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0.5dp"
+            android:paddingBottom="0dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="302dp"
+            android:layout_height="39dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+
+</LinearLayout>

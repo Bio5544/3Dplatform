@@ -1,0 +1,38 @@
+
+##Beuth Hochschule Berlin###################
+
+Bbox_Boundry="52.54241349485254,13.349053859710693,52.54608691552761,13.357121944427488"
+color="#00cecf"
+name="Beuth Hochschule 3D"
+camera_LatLon="52.5454363;13.3514886"
+
+
+###Building in Berlin###########
+Bbox_Boundry="52.478916091272055,13.453259021043777,52.479641407391625,13.454673886299133"
+color="#39ac73"
+name="Building"
+camera_LatLon="52.4795200;13.4540272"
+
+
+##Neues Museum####### Berlin
+Bbox_Boundry="52.51940031908257,13.3963143825531,52.520927942597396,13.39906632900238"
+color="#ff9966"
+name="Neues Museum"
+camera_LatLon="52.5198542;13.3981862"
+
+
+
+##Freie Universitaet Berlin#######
+Bbox_Boundry="52.444658248695504,13.274295330047606,52.45003340616635,13.2874059677124"
+color="#3366ff"
+name="Freie Universitaet Berlin"
+camera_LatLon="52.4477740;13.2819742"
+
+
+ 
+
+
+
+
+
+

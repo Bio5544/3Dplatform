@@ -38,20 +38,28 @@ QgsApplication.processingRegistry().addProvider(QgsNativeAlgorithms())
 server_Folder_Pfad=r"{}".format(Path_ServerFolder)
 current_path=os.getcwd()+"\\temp"
 
-
-filelist = [ f for f in os.listdir(current_path) ]
-for c in filelist:
-    os.remove(os.path.join(current_path, c))
+try:
+    filelist = [ f for f in os.listdir(current_path) ]
+    for c in filelist:
+        os.remove(os.path.join(current_path, c))
+except:
+    pass
 
 ## remove alle geojson files on the Server
-filelist = [ f for f in os.listdir(server_Folder_Pfad) if f.endswith(".geojson") ]
-for f in filelist:
-    os.remove(os.path.join(server_Folder_Pfad, f))
+try:
+    filelist = [ f for f in os.listdir(server_Folder_Pfad) if f.endswith(".geojson") ]
+    for f in filelist:
+        os.remove(os.path.join(server_Folder_Pfad, f))
+except:
+    pass
 
 ##remove the levels_num.json file on the server .
-filelist2 = [ f for f in os.listdir(server_Folder_Pfad) if f=="levels_num.json" ]
-for k in filelist2:
-    os.remove(os.path.join(server_Folder_Pfad, k))
+try:
+    filelist2 = [ f for f in os.listdir(server_Folder_Pfad) if f=="levels_num.json" ]
+    for k in filelist2:
+        os.remove(os.path.join(server_Folder_Pfad, k))
+except:
+    pass
 
 ##Query to Osm and get the json data:
     ## the Boundry taken from the config file .
@@ -71,7 +79,7 @@ response = requests.get(overpass_url,
 data = response.json()
 
 ## the json file will save in the Temp file .
-with open(current_path+'\\json.txt', 'w') as json_file:
+with open(current_path+'\\json.txt', 'w+') as json_file:
     json.dump(data, json_file)
 
 data2 = json.load(open(current_path+"\\json.txt"))
@@ -284,7 +292,7 @@ for i in range(0,50):
 
         l=i
         if len(geojson5_label["features"])!=0:
-            output1 = open(server_Folder_Pfad+"\{}POI.geojson".format(l), 'w', encoding='utf-8')
+            output1 = open(server_Folder_Pfad+"\{}POI.geojson".format(l), 'w+', encoding='utf-8')
             json.dump(geojson5_label, output1)
             output1.close()
 
@@ -369,7 +377,7 @@ for i in range(0,50):
         print("###########################################################")
         kk=i
         if len(geojson5["features"])!=0:
-            output = open(server_Folder_Pfad+"\{}.geojson".format(kk), 'w',encoding='utf-8')
+            output = open(server_Folder_Pfad+"\{}.geojson".format(kk), 'w+',encoding='utf-8')
             json.dump(geojson5_2, output)
             output.close()
 
@@ -377,7 +385,7 @@ for i in range(0,50):
 list_level+=config.color+";"+config.name+";"+camera_LatLon
 
 ## write the levels_num.json file , which contain (the levels , the Color , name , the cordinates of the Center of the Camera )
-file1 = open(server_Folder_Pfad+"\levels_num.json","w")
+file1 = open(server_Folder_Pfad+"\levels_num.json","w+")
 file1.write('[{"level":'+'"{}"'.format(list_level)+'}]')
 file1.close()
 

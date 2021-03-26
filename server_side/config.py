@@ -5,7 +5,7 @@ qgis_path=r"C:\Program Files\QGIS 3.8\apps\qgis"## example path="......\QGIS 3.8
 
 qgisPlugins_path=r"C:\Program Files\QGIS 3.8\apps\qgis\python\plugins"##example path="......\QGIS 3.8\apps\qgis\python\plugins"
 
-Path_ServerFolder=r"C:\inetpub\wwwroot\levelTestt"##path of the folder on the IIS Server .
+Path_ServerFolder=r"C:\inetpub\wwwroot\level"##path of the folder on the IIS Server .
 
 name="Beuth Hochschule 3D"   ##"Beuth Hochschule 3D"
 Bbox_Boundry="52.54241349485254,13.349053859710693,52.54608691552761,13.357121944427488"    ##example for Beuth ="52.54241349485254,13.349053859710693,52.54608691552761,13.357121944427488"
